@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Header } from '../src/components/Header'
+import AppRouter from './routers/AppRouter';
 
-ReactDOM.render(<Header />, document.getElementById('app'));
+const jsx = (
+    <AppRouter />
+);
+
+ReactDOM.render(jsx, document.getElementById('app'));

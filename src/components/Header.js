@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const Header = () => (
+const Header = () => (
     <header>
         <h1>Absence Manager</h1>
     </header>
 );
+
+export default Header;
