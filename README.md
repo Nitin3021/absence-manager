@@ -1,0 +1,3 @@
+# ~ Absence Manager ~
+
+## Work in progress.....
