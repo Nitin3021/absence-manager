@@ -3,20 +3,20 @@
 exports[`should render AbsenceList correctly 1`] = `
 <div>
   <div>
-    <p
-      key="709"
-    >
-      Max
-       
-      352
-    </p>
-    <p
-      key="713"
-    >
-      Ines
-       
-      352
-    </p>
+    <AbsenceListItem
+      crewId={352}
+      id={709}
+      image="https://loremflickr.com/300/400"
+      name="Max"
+      userId={644}
+    />
+    <AbsenceListItem
+      crewId={352}
+      id={713}
+      image="https://loremflickr.com/300/400"
+      name="Ines"
+      userId={649}
+    />
   </div>
 </div>
 `;

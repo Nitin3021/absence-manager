@@ -15,4 +15,4 @@ const jsx = (
 
 store.dispatch(startSetAbsences())
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(jsx, document.getElementById('app'))

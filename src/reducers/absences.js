@@ -1,22 +1,9 @@
-const absencesReducerDefaultState = [{
-    "crewId": 352,
-    "id": 709,
-    "image": "https://loremflickr.com/300/400",
-    "name": "Max",
-    "userId": 644
-},
-{
-    "crewId": 352,
-    "id": 713,
-    "image": "https://loremflickr.com/300/400",
-    "name": "Ines",
-    "userId": 649
-}]
+const absencesReducerDefaultState = [];
 
 export default (state = absencesReducerDefaultState, action) => {
-    switch (action) {
+    switch (action.type) {
         case 'SET_ABSENCES':
-            return action.absences;
+            return action.absences
         default:
             return state;
     }
