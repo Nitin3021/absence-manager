@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AbsenceList correctly 1`] = `
+<div>
+  <div>
+    <p
+      key="709"
+    >
+      Max
+       
+      352
+    </p>
+    <p
+      key="713"
+    >
+      Ines
+       
+      352
+    </p>
+  </div>
+</div>
+`;
