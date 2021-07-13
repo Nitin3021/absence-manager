@@ -1,0 +1,10 @@
+.list-item-message {
+    border: 1px solid darken($color: $off-white, $amount: 7%);
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    color: $grey;
+    justify-content: center;
+    padding: $m-size;
+    text-decoration: none;
+}

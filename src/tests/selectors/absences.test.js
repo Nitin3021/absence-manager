@@ -31,5 +31,5 @@ test('should filter by endDate', () => {
     };
 
     const result = selectAbsences(absences, filters);
-    expect(result).toEqual([ absences[0], absences[1] ]);
+    expect(result).toEqual([ absences[1] ]);
 });

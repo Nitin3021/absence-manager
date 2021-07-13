@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AbsenceListItem from '../../components/AbsenceListItem';
+import { AbsenceListItem } from '../../components/AbsenceListItem';
 
 test('should render AbsenceListItem correctly', () => {
     const absences = [{

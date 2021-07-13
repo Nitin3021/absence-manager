@@ -1,20 +1,57 @@
 import React from 'react';
 import moment from 'moment';
+import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from 'react-bootstrap-table2-paginator';
+import { connect } from 'react-redux';
+import selectAbsences from '../selectors/absences';
 
-const AbsenceListItem = ({ absences }) => {
-    return absences.map((absence) => {
-        const { key, name, type, createdAt, startDate, endDate, admitterNote } = absence;
-        return (
-            <tr key={key}>
-                <td>{name}</td>
-                <td>{type}</td>
-                <td>{moment(createdAt).format('DD.MMM.YYYY')}</td>
-                <td>{moment(startDate).format('DD.MMM.YYYY')}</td>
-                <td>{moment(endDate).format('DD.MMM.YYYY')}</td>
-                <td>{admitterNote}</td>
-            </tr>
-        )
+export const AbsenceListItem = (props) => {
+    const absences = props.absences.map((absence) => {
+        return {
+            key: absence.key,
+            name: absence.name,
+            type: absence.type,
+            createdAt: moment(absence.createdAt).format('DD.MMM.YYYY'),
+            startDate: moment(absence.startDate).format('DD.MMM.YYYY'),
+            endDate: moment(absence.endDate).format('DD.MMM.YYYY'),
+            status: absence.rejectedAt ? 'Rejected' : absence.confirmedAt ? 'Confirmed' : 'Requested',
+            admitterNote: absence.admitterNote
+        }
     })
+
+    const columns = [
+        { dataField: "name", text: "Member name", sort: true },
+        { dataField: "type", text: "Absence Type", sort: true },
+        { dataField: "createdAt", text: "Created On" },
+        { dataField: "startDate", text: "Start date" },
+        { dataField: "endDate", text: "End Date" },
+        { dataField: "status", text: "Status" },
+        { dataField: "admitterNote", text: "Admitter's Note" }
+    ]
+
+    return (
+        <div className="content-container-table">
+            {
+                props.absences.length === 0 ? (
+                    <div>
+                        <span className="list-item-message">No Absences!</span>
+                    </div>
+                ) : (
+                    <BootstrapTable
+                        keyField="key"
+                        data={absences}
+                        columns={columns}
+                        sort={{ dataField: "name", order: 'asc' }}
+                        pagination={paginationFactory()}
+                    />
+                )
+            }
+        </div>
+    )
 }
 
-export default AbsenceListItem;
+const mapStateToProps = (state) => ({
+    absences: selectAbsences(state.absences, state.filters)
+})
+
+export default connect(mapStateToProps)(AbsenceListItem);

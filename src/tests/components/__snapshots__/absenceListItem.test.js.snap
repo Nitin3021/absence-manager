@@ -1,22 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render AbsenceListItem correctly 1`] = `
-<tr>
-  <td>
-    Max
-  </td>
-  <td>
-    sickness
-  </td>
-  <td>
-    12.Dec.2020
-  </td>
-  <td>
-    13.Jan.2021
-  </td>
-  <td>
-    13.Jan.2021
-  </td>
-  <td />
-</tr>
+<div
+  className="content-container-table"
+>
+  <BootstrapTableContainer
+    columns={
+      Array [
+        Object {
+          "dataField": "name",
+          "sort": true,
+          "text": "Member name",
+        },
+        Object {
+          "dataField": "type",
+          "sort": true,
+          "text": "Absence Type",
+        },
+        Object {
+          "dataField": "createdAt",
+          "text": "Created On",
+        },
+        Object {
+          "dataField": "startDate",
+          "text": "Start date",
+        },
+        Object {
+          "dataField": "endDate",
+          "text": "End Date",
+        },
+        Object {
+          "dataField": "status",
+          "text": "Status",
+        },
+        Object {
+          "dataField": "admitterNote",
+          "text": "Admitter's Note",
+        },
+      ]
+    }
+    data={
+      Array [
+        Object {
+          "admitterNote": "",
+          "createdAt": "12.Dec.2020",
+          "endDate": "13.Jan.2021",
+          "key": undefined,
+          "name": "Max",
+          "startDate": "13.Jan.2021",
+          "status": "Confirmed",
+          "type": "sickness",
+        },
+      ]
+    }
+    keyField="key"
+    pagination={
+      Object {
+        "createContext": [Function],
+        "options": Object {},
+      }
+    }
+    sort={
+      Object {
+        "dataField": "name",
+        "order": "asc",
+      }
+    }
+  />
+</div>
 `;
