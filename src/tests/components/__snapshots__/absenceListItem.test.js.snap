@@ -1,41 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render AbsenceListItem correctly 1`] = `
-<div>
-  <h3>
-    <span>
-      Max
-       
-    </span>
-    <span>
-      sickness
-       
-    </span>
-    <span>
-      2020-12-12T14:17:01.000+01:00
-       
-    </span>
-    <span>
-      2021-01-13
-       
-    </span>
-    <span>
-      2021-01-13
-       
-    </span>
-    <span>
-       
-    </span>
-    <span>
-      2020-12-12T18:03:55.000+01:00
-       
-    </span>
-    <span>
-       
-    </span>
-    <span>
-       
-    </span>
-  </h3>
-</div>
+<tr>
+  <td>
+    Max
+  </td>
+  <td>
+    sickness
+  </td>
+  <td>
+    12.Dec.2020
+  </td>
+  <td>
+    13.Jan.2021
+  </td>
+  <td>
+    13.Jan.2021
+  </td>
+  <td />
+</tr>
 `;

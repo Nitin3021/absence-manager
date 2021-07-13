@@ -1,9 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header>
-  <h1>
-    Absence Manager
-  </h1>
+<header
+  className="header"
+>
+  <div
+    className="content-container"
+  >
+    <Link
+      className="header__title"
+      to="/"
+    >
+      <h1>
+        Absence Manager
+      </h1>
+    </Link>
+  </div>
 </header>
 `;

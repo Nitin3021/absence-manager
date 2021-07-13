@@ -1,19 +1,20 @@
 import React from 'react';
+import moment from 'moment';
 
-const AbsenceListItem = ({ name, type, createdAt, startDate, endDate, memberNote, confirmedAt, rejectedAt, admitterNote }) => (
-    <div>
-        <h3>
-            <span>{name} </span>
-            <span>{type} </span>
-            <span>{createdAt} </span>
-            <span>{startDate} </span>
-            <span>{endDate} </span>
-            <span>{memberNote} </span>
-            <span>{confirmedAt} </span>
-            <span>{rejectedAt} </span>
-            <span>{admitterNote} </span>
-        </h3>
-    </div>
-)
+const AbsenceListItem = ({ absences }) => {
+    return absences.map((absence) => {
+        const { key, name, type, createdAt, startDate, endDate, admitterNote } = absence;
+        return (
+            <tr key={key}>
+                <td>{name}</td>
+                <td>{type}</td>
+                <td>{moment(createdAt).format('DD.MMM.YYYY')}</td>
+                <td>{moment(startDate).format('DD.MMM.YYYY')}</td>
+                <td>{moment(endDate).format('DD.MMM.YYYY')}</td>
+                <td>{admitterNote}</td>
+            </tr>
+        )
+    })
+}
 
 export default AbsenceListItem;

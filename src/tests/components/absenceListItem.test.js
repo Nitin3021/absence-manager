@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import AbsenceListItem from '../../components/AbsenceListItem';
 
 test('should render AbsenceListItem correctly', () => {
-    const absences = {
+    const absences = [{
         "admitterId": null,
         "admitterNote": "",
         "confirmedAt": "2020-12-12T18:03:55.000+01:00",
@@ -18,8 +18,8 @@ test('should render AbsenceListItem correctly', () => {
         "userId": 2664,
         "image": "https://loremflickr.com/300/400",
         "name": "Max",
-    }
+    }]
 
-    const wrapper = shallow(<AbsenceListItem {...absences} />);
+    const wrapper = shallow(<AbsenceListItem absences={absences} />);
     expect(wrapper).toMatchSnapshot();
 });

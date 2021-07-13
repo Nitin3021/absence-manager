@@ -1,0 +1,29 @@
+#table-absences {
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid $light-grey;
+    width: 100%;
+}
+
+#table-absences td,
+#table-absences th {
+    border: 1px solid $light-grey;
+    padding: 8px;
+}
+
+#table-absences tr:nth-child(even) {
+    background-color: $off-white;
+}
+
+#table-absences tr:hover {
+    background-color: $light-grey;
+}
+
+#table-absences th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #9bc4ac;
+    color: white;
+}

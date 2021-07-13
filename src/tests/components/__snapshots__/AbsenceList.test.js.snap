@@ -1,24 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render AbsenceList correctly 1`] = `
-<div>
-  <div>
-    <AbsenceListItem
-      crewId={352}
-      id={709}
-      image="https://loremflickr.com/300/400"
-      key="1"
-      name="Max"
-      userId={644}
-    />
-    <AbsenceListItem
-      crewId={352}
-      id={713}
-      image="https://loremflickr.com/300/400"
-      key="2"
-      name="Ines"
-      userId={649}
-    />
-  </div>
+<div
+  className="content-container"
+>
+  <table
+    id="table-absences"
+  >
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Created On
+        </th>
+        <th>
+          Start Date
+        </th>
+        <th>
+          End Date
+        </th>
+        <th>
+          Admitters Note
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <AbsenceListItem
+        absences={
+          Array [
+            Object {
+              "crewId": 352,
+              "id": 709,
+              "image": "https://loremflickr.com/300/400",
+              "key": 1,
+              "name": "Max",
+              "userId": 644,
+            },
+            Object {
+              "crewId": 352,
+              "id": 713,
+              "image": "https://loremflickr.com/300/400",
+              "key": 2,
+              "name": "Ines",
+              "userId": 649,
+            },
+          ]
+        }
+      />
+    </tbody>
+  </table>
 </div>
 `;

@@ -11,9 +11,21 @@ export const AbsenceList = (props) => (
                     <span>No Absences!</span>
                 </div>
             ) : (
-                props.absences.map((absence) => {
-                    return <AbsenceListItem key={absence.key} {...absence} />;
-                })
+                <table id='table-absences'>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Created On</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Admitters Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <AbsenceListItem absences={props.absences} />
+                    </tbody>
+                </table>
             )
         }
     </div>

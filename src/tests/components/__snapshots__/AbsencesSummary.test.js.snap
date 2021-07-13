@@ -1,35 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should correctly render AbsencesSummary with 1 absence 1`] = `
-<div>
-  <h1>
-    Viewing total 
-    1
-     
-    Absence
-  </h1>
-  <p>
-    Filtered 
-     
-    Absences
-     
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing total 
+      1
+       
+      Absence
+    </h1>
+    <p>
+      Filtered 
+       
+      Absences
+       
+    </p>
+  </div>
 </div>
 `;
 
 exports[`should correctly render AbsencesSummary with multiple absences 1`] = `
-<div>
-  <h1>
-    Viewing total 
-    21
-     
-    Absences
-  </h1>
-  <p>
-    Filtered 
-     
-    Absences
-     
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing total 
+      21
+       
+      Absences
+    </h1>
+    <p>
+      Filtered 
+       
+      Absences
+       
+    </p>
+  </div>
 </div>
 `;
