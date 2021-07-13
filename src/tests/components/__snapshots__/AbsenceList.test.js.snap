@@ -7,6 +7,7 @@ exports[`should render AbsenceList correctly 1`] = `
       crewId={352}
       id={709}
       image="https://loremflickr.com/300/400"
+      key="1"
       name="Max"
       userId={644}
     />
@@ -14,6 +15,7 @@ exports[`should render AbsenceList correctly 1`] = `
       crewId={352}
       id={713}
       image="https://loremflickr.com/300/400"
+      key="2"
       name="Ines"
       userId={649}
     />

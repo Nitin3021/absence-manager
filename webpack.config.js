@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -9,6 +10,8 @@ if (process.env.NODE_ENV === 'test') {
 };
 
 module.exports = (env) => {
+    const CSSExtract = new MiniCssExtractPlugin({ filename: "styles.css" });
+
     return {
         entry: ['babel-polyfill', './src/app.js'],
         output: {
@@ -20,8 +23,29 @@ module.exports = (env) => {
                 loader: 'babel-loader',
                 test: /\.js$/,
                 exclude: /node_modules/
+            }, {
+                test: /\.s?css$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                            url: false
+                        }
+                    }, 
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             }]
         },
+        plugins: [
+            CSSExtract,
+        ],
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true,
