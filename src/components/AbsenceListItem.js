@@ -1,10 +1,11 @@
 import React from 'react';
 
-const AbsenceListItem = ({ name, type, startDate, endDate, memberNote, confirmedAt, rejectedAt, admitterNote }) => (
+const AbsenceListItem = ({ name, type, createdAt, startDate, endDate, memberNote, confirmedAt, rejectedAt, admitterNote }) => (
     <div>
         <h3>
             <span>{name} </span>
             <span>{type} </span>
+            <span>{createdAt} </span>
             <span>{startDate} </span>
             <span>{endDate} </span>
             <span>{memberNote} </span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import AbsenceListItem from './AbsenceListItem';
+import selectAbsences from '../selectors/absences';
 
 export const AbsenceList = (props) => (
     <div>
@@ -21,7 +22,7 @@ export const AbsenceList = (props) => (
 )
 
 const mapStateToProps = (state) => ({
-    absences: state.absences
+    absences: selectAbsences(state.absences, state.filters)
 })
 
 export default connect(mapStateToProps)(AbsenceList);

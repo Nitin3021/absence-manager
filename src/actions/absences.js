@@ -10,7 +10,6 @@ export const setAbsences = (absences) => ({
 export const startSetAbsences = () => {
     return (dispatch) => {
         let absences = [];
-        console.log(absencesData.payload.length)
 
         for (let i = 0; i < absencesData.payload.length; i++) {
             absences.push({
@@ -20,7 +19,6 @@ export const startSetAbsences = () => {
             }
             );
         }
-        console.log(absences)
 
         dispatch(setAbsences(absences));
     }

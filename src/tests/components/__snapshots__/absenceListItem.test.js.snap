@@ -12,6 +12,10 @@ exports[`should render AbsenceListItem correctly 1`] = `
        
     </span>
     <span>
+      2020-12-12T14:17:01.000+01:00
+       
+    </span>
+    <span>
       2021-01-13
        
     </span>
