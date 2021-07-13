@@ -1,8 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
-    <header>
-        <h1>Absence Manager</h1>
+    <header className="header">
+        <div className="content-container">
+            <Link className="header__title" to="/">
+                <h1>Absence Manager</h1>
+            </Link>
+        </div>
     </header>
 );
 

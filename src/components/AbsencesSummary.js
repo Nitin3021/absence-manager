@@ -7,15 +7,17 @@ export const AbsencesSummary = (props) => {
     const hiddenAbsenceCountWord = props.hiddenAbsenceCount === 1 ? 'Absence' : 'Absences';
 
     return (
-        <div>
-            <h1>Viewing total {props.absenceCount} {absenceWord}</h1>
-            {
-                props.hiddenAbsenceCount === 0 ? (
-                    <p>No filtered absence!</p>
-                ) : (
-                    <p>Filtered {props.hiddenAbsenceCount} {hiddenAbsenceCountWord} </p>
-                )
-            }
+        <div className="page-header">
+            <div className="content-container">
+                <h1 className="page-header__title">Viewing total {props.absenceCount} {absenceWord}</h1>
+                {
+                    props.hiddenAbsenceCount === 0 ? (
+                        <p>No filtered absence!</p>
+                    ) : (
+                        <p>Filtered {props.hiddenAbsenceCount} {hiddenAbsenceCountWord} </p>
+                    )
+                }
+            </div>
         </div>
     )
 }

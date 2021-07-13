@@ -4,20 +4,18 @@ import AbsenceListItem from './AbsenceListItem';
 import selectAbsences from '../selectors/absences';
 
 export const AbsenceList = (props) => (
-    <div>
-        <div>
-            {
-                props.absences.length === 0 ? (
-                    <div>
-                        <span>No Absences!</span>
-                    </div>
-                ) : (
-                    props.absences.map((absence) => {
-                        return <AbsenceListItem key={absence.key} {...absence} />;
-                    })
-                )
-            }
-        </div>
+    <div className="content-container">
+        {
+            props.absences.length === 0 ? (
+                <div>
+                    <span>No Absences!</span>
+                </div>
+            ) : (
+                props.absences.map((absence) => {
+                    return <AbsenceListItem key={absence.key} {...absence} />;
+                })
+            )
+        }
     </div>
 )
 
