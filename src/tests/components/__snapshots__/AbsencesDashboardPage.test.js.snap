@@ -2,6 +2,7 @@
 
 exports[`should render AbsenceDashBoardPage correctly 1`] = `
 <div>
+  <Connect(AbsencesSummary) />
   <Connect(AbsenceListFilters) />
   <Connect(AbsenceList) />
 </div>
