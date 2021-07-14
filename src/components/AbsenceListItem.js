@@ -34,7 +34,7 @@ export const AbsenceListItem = (props) => {
             {
                 props.absences.length === 0 ? (
                     <div>
-                        <span className="list-item-message">No Absences!</span>
+                        <span className="list-item-message">No Absence!</span>
                     </div>
                 ) : (
                     <BootstrapTable

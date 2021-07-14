@@ -20,7 +20,7 @@ export const startSetAbsences = () => {
             return JSON.parse(absences)
         }
         
-        getData().then((absences) => {
+        return getData().then((absences) => {
             dispatch(setAbsences(absences.membersAbsences));
         });
     }
