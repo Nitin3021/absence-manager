@@ -1,6 +1,3 @@
-import membersData from '../api/json_files/members.json'
-import absencesData from '../api/json_files/absences.json'
-
 // Absence details
 export const setAbsences = (absences) => ({
     type: 'SET_ABSENCES',
@@ -10,16 +7,21 @@ export const setAbsences = (absences) => ({
 export const startSetAbsences = () => {
     return (dispatch) => {
         let absences = [];
+        const url = 'https://json-data-api.herokuapp.com/';
 
-        for (let i = 0; i < absencesData.payload.length; i++) {
-            absences.push({
-                key: i,
-                ...absencesData.payload[i],
-                ...(membersData.payload.find((itmInner) => itmInner.userId === absencesData.payload[i].userId))
-            }
-            );
+        const options = {
+            method: 'GET',
+            headers: new Headers({ 'Content-Type': 'application/json' })
         }
 
-        dispatch(setAbsences(absences));
+        async function getData() {
+            const members = await fetch(url, options)
+            absences = await members.json();
+            return JSON.parse(absences)
+        }
+        
+        getData().then((absences) => {
+            dispatch(setAbsences(absences.membersAbsences));
+        });
     }
 }

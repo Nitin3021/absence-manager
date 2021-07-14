@@ -1,8 +1,8 @@
 #table-absences {
-    text-align: center;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     border: 3px solid $light-grey;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
     width: 100%;
 }
 
@@ -21,9 +21,9 @@
 }
 
 #table-absences th {
+    background-color: $dark-blue;
+    color: white;
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #9bc4ac;
-    color: white;
 }

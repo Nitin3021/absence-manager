@@ -29,7 +29,7 @@ export class AbsenceListFilters extends React.Component {
                         <input
                             type="text"
                             className="text-input"
-                            placeholder="Search absences"
+                            placeholder="Search absence type"
                             value={this.props.filters.text}
                             onChange={this.onTextChange}
                         />

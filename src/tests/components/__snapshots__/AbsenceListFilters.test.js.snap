@@ -13,7 +13,7 @@ exports[`should render AbsenceListFilters correctly 1`] = `
       <input
         className="text-input"
         onChange={[Function]}
-        placeholder="Search absences"
+        placeholder="Search absence type"
         type="text"
         value=""
       />

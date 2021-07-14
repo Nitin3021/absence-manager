@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -45,6 +46,7 @@ module.exports = (env) => {
         },
         plugins: [
             CSSExtract,
+            new NodePolyfillPlugin()
         ],
         devServer: {
             contentBase: path.join(__dirname, 'public'),

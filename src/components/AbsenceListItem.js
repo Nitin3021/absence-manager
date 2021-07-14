@@ -14,7 +14,7 @@ export const AbsenceListItem = (props) => {
             createdAt: moment(absence.createdAt).format('DD.MMM.YYYY'),
             startDate: moment(absence.startDate).format('DD.MMM.YYYY'),
             endDate: moment(absence.endDate).format('DD.MMM.YYYY'),
-            status: absence.rejectedAt ? 'Rejected' : absence.confirmedAt ? 'Confirmed' : 'Requested',
+            status: (absence.rejectedAt ? 'Rejected' : (absence.confirmedAt ? 'Confirmed' : 'Requested')),
             admitterNote: absence.admitterNote
         }
     })
@@ -25,7 +25,7 @@ export const AbsenceListItem = (props) => {
         { dataField: "createdAt", text: "Created On" },
         { dataField: "startDate", text: "Start date" },
         { dataField: "endDate", text: "End Date" },
-        { dataField: "status", text: "Status" },
+        { dataField: "status", text: "Status", sort: true },
         { dataField: "admitterNote", text: "Admitter's Note" }
     ]
 
@@ -38,6 +38,7 @@ export const AbsenceListItem = (props) => {
                     </div>
                 ) : (
                     <BootstrapTable
+                        id="table-absences"
                         keyField="key"
                         data={absences}
                         columns={columns}

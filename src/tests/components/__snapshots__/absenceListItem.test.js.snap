@@ -31,6 +31,7 @@ exports[`should render AbsenceListItem correctly 1`] = `
         },
         Object {
           "dataField": "status",
+          "sort": true,
           "text": "Status",
         },
         Object {
@@ -53,6 +54,7 @@ exports[`should render AbsenceListItem correctly 1`] = `
         },
       ]
     }
+    id="table-absences"
     keyField="key"
     pagination={
       Object {
