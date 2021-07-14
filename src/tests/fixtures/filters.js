@@ -2,9 +2,9 @@ import moment from 'moment';
 
 const filters = {
     text: '',
-    sortBy: 'date',
     startDate: undefined,
-    endDate: undefined
+    endDate: undefined,
+    sortBy: 'createdAt'
 };
 
 export { filters };

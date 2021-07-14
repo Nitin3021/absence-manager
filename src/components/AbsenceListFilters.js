@@ -1,7 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
-import { setTextFilter, setStartDate, setEndDate } from '../actions/filters'
+import { setTextFilter, 
+         setStartDate, 
+         setEndDate, 
+         sortByCreatedDate, 
+         sortByStartDate, 
+         sortByEndDate } from '../actions/filters';
 
 export class AbsenceListFilters extends React.Component {
     state = {
@@ -19,6 +24,16 @@ export class AbsenceListFilters extends React.Component {
 
     onTextChange = (e) => {
         this.props.setTextFilter(e.target.value);
+    };
+
+    onSortChange = (e) => {
+        if (e.target.value === 'createdAt') {
+            this.props.sortByCreatedDate();
+        } else if (e.target.value === 'startDate') {
+            this.props.sortByStartDate();
+        } else if (e.target.value === 'endDate') {
+            this.props.sortByEndDate();
+        }
     };
 
     render() {
@@ -46,6 +61,17 @@ export class AbsenceListFilters extends React.Component {
                             isOutsideRange={() => false}
                         />
                     </div>
+                    <div className="input-group__item">
+                        <select
+                            className="select"
+                            value={this.props.filters.sortBy}
+                            onChange={this.onSortChange}
+                        >
+                            <option value="createdAt">Created On</option>
+                            <option value="startDate">Start Date</option>
+                            <option value="endDate">End Date</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         );
@@ -59,7 +85,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     setTextFilter: (text) => dispatch(setTextFilter(text)),
     setStartDate: (startDate) => dispatch(setStartDate(startDate)),
-    setEndDate: (endDate) => dispatch(setEndDate(endDate))
+    setEndDate: (endDate) => dispatch(setEndDate(endDate)),
+    sortByCreatedDate: () => dispatch(sortByCreatedDate()),
+    sortByStartDate: () => dispatch(sortByStartDate()),
+    sortByEndDate: () => dispatch(sortByEndDate())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AbsenceListFilters);

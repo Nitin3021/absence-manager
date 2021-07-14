@@ -5,3 +5,7 @@
     font-weight: 300;
     padding: $s-size;
 }
+
+.select {
+    @extend .text-input;
+}

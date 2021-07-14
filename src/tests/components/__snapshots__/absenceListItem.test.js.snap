@@ -62,12 +62,6 @@ exports[`should render AbsenceListItem correctly 1`] = `
         "options": Object {},
       }
     }
-    sort={
-      Object {
-        "dataField": "name",
-        "order": "asc",
-      }
-    }
   />
 </div>
 `;

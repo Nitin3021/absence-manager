@@ -105,6 +105,31 @@ exports[`should render AbsenceListFilters correctly 1`] = `
         withPortal={false}
       />
     </div>
+    <div
+      className="input-group__item"
+    >
+      <select
+        className="select"
+        onChange={[Function]}
+        value="createdAt"
+      >
+        <option
+          value="createdAt"
+        >
+          Created On
+        </option>
+        <option
+          value="startDate"
+        >
+          Start Date
+        </option>
+        <option
+          value="endDate"
+        >
+          End Date
+        </option>
+      </select>
+    </div>
   </div>
 </div>
 `;

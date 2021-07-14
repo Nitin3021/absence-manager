@@ -5,7 +5,8 @@ import moment from 'moment';
 const filtersReducerDefaultState = {
     text: '',
     startDate: moment().startOf('month'),
-    endDate: moment().endOf('month')
+    endDate: moment().endOf('month'),
+    sortBy: 'createdAt'
 };
 
 export default (state = filtersReducerDefaultState, action) => {
@@ -24,6 +25,21 @@ export default (state = filtersReducerDefaultState, action) => {
             return {
                 ...state,
                 endDate: action.endDate
+            };
+        case 'SORT_BY_CREATED_DATE':
+            return {
+                ...state,
+                sortBy: 'createdAt'
+            };
+        case 'SORT_BY_START_DATE':
+            return {
+                ...state,
+                sortBy: 'startDate'
+            };
+        case 'SORT_BY_END_DATE':
+            return {
+                ...state,
+                sortBy: 'endDate'
             };
         default:
             return state;

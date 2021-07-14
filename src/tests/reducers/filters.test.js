@@ -6,8 +6,48 @@ test('should setup default filter values', () => {
     expect(state).toEqual({
         text: '',
         startDate: moment().startOf('month'),
-        endDate: moment().endOf('month')
+        endDate: moment().endOf('month'),
+        sortBy: 'createdAt'
     });
+});
+
+test('should set sortBy to createdAt', () => {
+    const currentState = {
+        text: '',
+        startDate: undefined,
+        endDate: undefined,
+        sortBy: 'startDate'
+    };
+
+    const action = { type: 'SORT_BY_CREATED_DATE' };
+    const state = filtersReducer(currentState, action);
+    expect(state.sortBy).toBe('createdAt');
+});
+
+test('should set sortBy to startDate', () => {
+    const currentState = {
+        text: '',
+        startDate: undefined,
+        endDate: undefined,
+        sortBy: 'endDate'
+    };
+
+    const action = { type: 'SORT_BY_START_DATE' };
+    const state = filtersReducer(currentState, action);
+    expect(state.sortBy).toBe('startDate');
+});
+
+test('should set sortBy to endDate', () => {
+    const currentState = {
+        text: '',
+        startDate: undefined,
+        endDate: undefined,
+        sortBy: 'startDate'
+    };
+
+    const action = { type: 'SORT_BY_END_DATE' };
+    const state = filtersReducer(currentState, action);
+    expect(state.sortBy).toBe('endDate');
 });
 
 test('should set text filter', () => {

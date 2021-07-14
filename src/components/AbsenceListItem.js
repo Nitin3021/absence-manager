@@ -42,7 +42,6 @@ export const AbsenceListItem = (props) => {
                         keyField="key"
                         data={absences}
                         columns={columns}
-                        sort={{ dataField: "name", order: 'asc' }}
                         pagination={paginationFactory()}
                     />
                 )
