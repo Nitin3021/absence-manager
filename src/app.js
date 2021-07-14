@@ -11,6 +11,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import './styles/styles.scss';
 import { startSetAbsences } from './actions/absences';
 import LoadingPage from './components/LoadingPage';
+import ErrorPage from './components/ErrorPage';
 
 const store = configureStore();
 
@@ -20,6 +21,8 @@ const jsx = (
     </Provider>
 );
 
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
+
 let hasRendered = false;
 const renderApp = () => {
     if (!hasRendered) {
@@ -28,8 +31,8 @@ const renderApp = () => {
     }
 };
 
-ReactDOM.render(<LoadingPage />, document.getElementById('app'));
-
 store.dispatch(startSetAbsences()).then(() => {
     renderApp();
+}).catch((e) => {
+    ReactDOM.render(<ErrorPage />, document.getElementById('app'));
 })

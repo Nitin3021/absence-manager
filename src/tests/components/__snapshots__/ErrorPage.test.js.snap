@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ErrorPage correctly 1`] = `
+<div
+  className="error-layout"
+>
+  <h1
+    className="error-text"
+  >
+    An error encountered while fetching, please try again later!
+  </h1>
+</div>
+`;
