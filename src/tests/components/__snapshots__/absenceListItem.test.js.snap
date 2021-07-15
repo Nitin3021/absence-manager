@@ -50,7 +50,7 @@ exports[`should render AbsenceListItem correctly 1`] = `
           "name": "Mike",
           "startDate": "01.Jan.1970",
           "status": "Rejected",
-          "type": "vacation",
+          "type": "Vacation",
         },
         Object {
           "admitterNote": "",
@@ -60,7 +60,7 @@ exports[`should render AbsenceListItem correctly 1`] = `
           "name": "Ines",
           "startDate": "28.Dec.1969",
           "status": "Confirmed",
-          "type": "sickness",
+          "type": "Sickness",
         },
         Object {
           "admitterNote": "",
@@ -70,7 +70,7 @@ exports[`should render AbsenceListItem correctly 1`] = `
           "name": "Daniel",
           "startDate": "05.Jan.1970",
           "status": "Rejected",
-          "type": "vacation",
+          "type": "Vacation",
         },
       ]
     }

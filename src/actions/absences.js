@@ -8,7 +8,7 @@ export const setAbsences = (absences) => ({
 
 export const startSetAbsences = () => (dispatch) => {
     let absences = [];
-    const url = 'https://json-data-api.herokuapp.com/';
+    const url = 'https://json-data-api.herokuapp.com';
 
     const options = {
         method: 'GET',
@@ -16,9 +16,13 @@ export const startSetAbsences = () => (dispatch) => {
     }
 
     async function getData() {
-        const members = await fetch(url, options)
-        absences = await members.json();
-        return JSON.parse(absences)
+        try {
+            const members = await fetch(url, options);  
+            absences = await members.json();
+            return JSON.parse(absences);
+        } catch(e) {
+            throw new Error(e);
+        }
     }
 
     return getData().then((absences) => {

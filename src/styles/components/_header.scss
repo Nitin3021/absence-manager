@@ -1,6 +1,10 @@
 .header {
-    background: $dark-orange;
-    border-bottom: 2px solid $dark-orange;
+    background: -webkit-linear-gradient($dark-orange, lighten($dark-orange, 20%));
+    background: -moz-linear-gradient($dark-orange, lighten($dark-orange, 20%));
+    background: linear-gradient($dark-orange, lighten($dark-orange, 20%));
+    background: -ms-linear-gradient($dark-orange, lighten($dark-orange, 20%));
+    background: -o-linear-gradient($dark-orange, lighten($dark-orange, 20%));
+    border-bottom: 1px solid lighten($dark-orange, 10%);
     flex-direction: row;
     display: flex;
     text-align: center;

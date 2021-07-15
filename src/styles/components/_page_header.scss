@@ -1,6 +1,10 @@
 .page-header {
-    background: $off-white;
-    margin-bottom: $l-size;
+    background: -webkit-linear-gradient(rgb(194, 190, 190), lighten($off-white, 20%));
+    background: -moz-linear-gradient(rgb(194, 190, 190), lighten($off-white, 20%));
+    background: linear-gradient(rgb(194, 190, 190), lighten($off-white, 20%));
+    background: -ms-linear-gradient(rgb(194, 190, 190), lighten($off-white, 20%));
+    background: -o-linear-gradient(rgb(194, 190, 190), lighten($off-white, 20%));
+    margin-bottom: $s-size;
     padding: $s-size 0;
 }
 

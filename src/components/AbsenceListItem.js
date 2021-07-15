@@ -19,7 +19,7 @@ export const AbsenceListItem = (props) => {
         return {
             key: absence.key,
             name: absence.name,
-            type: absence.type,
+            type: absence.type ? (absence.type.charAt(0).toUpperCase() + absence.type.slice(1)) : 'No Type',
             createdAt: moment(absence.createdAt).format('DD.MMM.YYYY'),
             startDate: moment(absence.startDate).format('DD.MMM.YYYY'),
             endDate: moment(absence.endDate).format('DD.MMM.YYYY'),

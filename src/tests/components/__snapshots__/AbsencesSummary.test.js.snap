@@ -15,11 +15,12 @@ exports[`should correctly render AbsencesSummary with 1 absence 1`] = `
        
       Absence
     </h1>
-    <p>
+    <p
+      className="page-header__filtered-absence"
+    >
       Filtered 
        
       Absences
-       
     </p>
   </div>
 </div>
@@ -40,11 +41,12 @@ exports[`should correctly render AbsencesSummary with multiple absences 1`] = `
        
       Absences
     </h1>
-    <p>
+    <p
+      className="page-header__filtered-absence"
+    >
       Filtered 
        
       Absences
-       
     </p>
   </div>
 </div>
