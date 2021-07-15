@@ -1,14 +1,17 @@
 # Absence Manager
 
 ## Overview
-This reactJS based application will fetch a set of data related to absence from an API and display it in a table form. A set of 10 records (if available) will be displayed after the page loads successfully. Thereafter, pagination can be used to go through the data. A set of filters are available which will help to view the selected data. It would also allow to sort the data by the selected column.
+This ReactJS based application will fetch a set of data related to absence from an API and display it in a table form. A set of 10 records (if available) will be displayed after the page loads successfully. Thereafter, pagination can be used to go through the data. A set of filters are available which will help to view the selected data. It would also allow to sort the data by the selected column.
 
 ## Details
 *  After fetching data from the API, redux store has been implemented to pass the values between the components. 
 *  Initial page rendering will depend upon the successful fetch from the API. It will show a loading screen until a response is received, an error screen if the response is received with an error.
-
 *  At the top, there is a text which displays the total number of records that are selected. Below this, there is a line showing the number of records which are hidden due to filters applied.
 *  Filters are provided to filter by absence type. Start & End date can also be used to filter out the contents in the table. Initial values for the fields are blank.
+    * Absence Type - Text field to enter the type of absence to be filtered.
+    * Start Date   - Start date filter is tied to 'Start Date' in data.
+    * End Date     - End date filter is tied to 'End Date' in data.
+      Date filters can be either open ended or close ended.
 *  Sorting is provided on 3 fields: Created at, Start & end dates. Page will be loaded with default sorting on 'Created at' date.
 *  Columns are displaying following contents:
     * Member name
