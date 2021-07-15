@@ -43,14 +43,34 @@ exports[`should render AbsenceListItem correctly 1`] = `
     data={
       Array [
         Object {
-          "admitterNote": "",
-          "createdAt": "12.Dec.2020",
-          "endDate": "13.Jan.2021",
+          "admitterNote": "Sorry",
+          "createdAt": "01.Jan.1970",
+          "endDate": "09.Jan.1970",
           "key": undefined,
-          "name": "Max",
-          "startDate": "13.Jan.2021",
+          "name": "Mike",
+          "startDate": "01.Jan.1970",
+          "status": "Rejected",
+          "type": "vacation",
+        },
+        Object {
+          "admitterNote": "",
+          "createdAt": "28.Dec.1969",
+          "endDate": "01.Jan.1970",
+          "key": undefined,
+          "name": "Ines",
+          "startDate": "28.Dec.1969",
           "status": "Confirmed",
           "type": "sickness",
+        },
+        Object {
+          "admitterNote": "",
+          "createdAt": "05.Jan.1970",
+          "endDate": "07.Jan.1970",
+          "key": undefined,
+          "name": "Daniel",
+          "startDate": "05.Jan.1970",
+          "status": "Rejected",
+          "type": "vacation",
         },
       ]
     }

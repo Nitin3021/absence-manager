@@ -5,7 +5,7 @@ const Header = () => (
     <header className="header">
         <div className="content-container">
             <Link className="header__title" to="/">
-                <img className="header__logo" src="/images/logo.png" />
+                <img className="header__logo" src="/images/logo.png" alt="" />
                 <h1>Absence Manager</h1>
             </Link>
         </div>

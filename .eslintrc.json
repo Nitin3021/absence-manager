@@ -1,0 +1,22 @@
+{
+    "extends": [
+        "airbnb",
+        "prettier"
+    ],
+    "rules": {
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "func-names": "off",
+        "object-shorthand": "off",
+        "class-methods-use-this": "off",
+        "import/no-named-as-default": "off",
+        "import/no-named-as-default-member": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/state-in-constructor": [1, "never"],
+        "react/destructuring-assignment": [1, "never"],
+        "react/prop-types": "off",
+        "no-undef": "off"
+    },
+    "parser": "babel-eslint"
+}
+

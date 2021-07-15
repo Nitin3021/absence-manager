@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
-import { setTextFilter, 
-         setStartDate, 
-         setEndDate, 
-         sortByCreatedDate, 
-         sortByStartDate, 
-         sortByEndDate } from '../actions/filters';
+import {
+    setTextFilter,
+    setStartDate,
+    setEndDate,
+    sortByCreatedDate,
+    sortByStartDate,
+    sortByEndDate
+} from '../actions/filters';
 
 export class AbsenceListFilters extends React.Component {
     state = {
@@ -56,7 +58,7 @@ export class AbsenceListFilters extends React.Component {
                             onDatesChange={this.onDatesChange}
                             focusedInput={this.state.calendarFocused}
                             onFocusChange={this.onFocusChange}
-                            showClearDates={true}
+                            showClearDates
                             numberOfMonths={1}
                             isOutsideRange={() => false}
                         />

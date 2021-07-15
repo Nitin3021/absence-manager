@@ -6,15 +6,15 @@ export default [{
     "confirmedAt": null,
     "createdAt": moment(0).valueOf(),
     "crewId": 352,
-    "endDate": moment(0).add(4, 'days').valueOf(),
+    "endDate": moment(0).add(8, 'days').valueOf(),
     "id": 2521,
     "memberNote": "ganzer tag",
     "rejectedAt": "2021-01-03T17:39:50.000+01:00",
-    "startDate":  moment(0).valueOf(),
+    "startDate": moment(0).valueOf(),
     "type": "vacation",
     "userId": 2664,
     "image": "https://loremflickr.com/300/400",
-    "name": "Mike",
+    "name": "Mike"
 },
 {
     "admitterId": null,
@@ -30,7 +30,7 @@ export default [{
     "type": "sickness",
     "userId": 649,
     "image": "https://loremflickr.com/300/400",
-    "name": "Ines",
+    "name": "Ines"
 },
 {
     "admitterId": null,
@@ -45,6 +45,5 @@ export default [{
     "startDate": moment(0).add(4, 'days').valueOf(),
     "type": "vacation",
     "userId": 5293,
-    "name": "Daniel",
-    "userId": 5293
+    "name": "Daniel"
 }];

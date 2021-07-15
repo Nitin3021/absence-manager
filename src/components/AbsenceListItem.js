@@ -7,6 +7,15 @@ import selectAbsences from '../selectors/absences';
 
 export const AbsenceListItem = (props) => {
     const absences = props.absences.map((absence) => {
+        let status;
+        if (absence.rejectedAt) {
+            status = 'Rejected'
+        } else if (absence.confirmedAt) {
+            status = 'Confirmed'
+        } else {
+            status = 'Requested'
+        }
+
         return {
             key: absence.key,
             name: absence.name,
@@ -14,7 +23,7 @@ export const AbsenceListItem = (props) => {
             createdAt: moment(absence.createdAt).format('DD.MMM.YYYY'),
             startDate: moment(absence.startDate).format('DD.MMM.YYYY'),
             endDate: moment(absence.endDate).format('DD.MMM.YYYY'),
-            status: (absence.rejectedAt ? 'Rejected' : (absence.confirmedAt ? 'Confirmed' : 'Requested')),
+            status,
             admitterNote: absence.admitterNote
         }
     })

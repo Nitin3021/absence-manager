@@ -1,11 +1,12 @@
+/* eslint-disable no-shadow */
+/* eslint-disable no-undef */
 // Absence details
 export const setAbsences = (absences) => ({
     type: 'SET_ABSENCES',
     absences
 });
 
-export const startSetAbsences = () => {
-    return (dispatch) => {
+export const startSetAbsences = () => (dispatch) => {
         let absences = [];
         const url = 'https://json-data-api.herokuapp.com/';
 
@@ -24,4 +25,3 @@ export const startSetAbsences = () => {
             dispatch(setAbsences(absences.membersAbsences));
         });
     }
-}

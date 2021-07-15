@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppRouter from './routers/AppRouter';
 import { Provider } from 'react-redux';
+import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import 'normalize.css/normalize.css';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
@@ -33,6 +33,6 @@ const renderApp = () => {
 
 store.dispatch(startSetAbsences()).then(() => {
     renderApp();
-}).catch((e) => {
+}).catch(() => {
     ReactDOM.render(<ErrorPage />, document.getElementById('app'));
 })

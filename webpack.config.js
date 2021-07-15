@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
@@ -10,7 +11,7 @@ if (process.env.NODE_ENV === 'test') {
     require('dotenv').config({ path: '.env.development' });
 };
 
-module.exports = (env) => {
+module.exports = () => {
     const CSSExtract = new MiniCssExtractPlugin({ filename: "styles.css" });
 
     return {
@@ -27,14 +28,14 @@ module.exports = (env) => {
             }, {
                 test: /\.s?css$/,
                 use: [
-                    MiniCssExtractPlugin.loader, 
+                    MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
                         options: {
                             sourceMap: true,
                             url: false
                         }
-                    }, 
+                    },
                     {
                         loader: 'sass-loader',
                         options: {

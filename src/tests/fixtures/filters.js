@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment from "moment";
 
 const filters = {
     text: '',
@@ -7,4 +7,11 @@ const filters = {
     sortBy: 'createdAt'
 };
 
-export { filters };
+const altFilters = {
+    text: 'vacation',
+    startDate: moment(0),
+    endDate: moment(0).add(4, 'days'),
+    sortBy: 'startDate'
+};
+
+export { filters, altFilters };

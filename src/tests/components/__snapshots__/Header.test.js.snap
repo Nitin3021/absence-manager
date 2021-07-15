@@ -12,6 +12,7 @@ exports[`should render Header correctly 1`] = `
       to="/"
     >
       <img
+        alt=""
         className="header__logo"
         src="/images/logo.png"
       />
