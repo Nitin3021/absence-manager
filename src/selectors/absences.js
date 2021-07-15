@@ -8,7 +8,7 @@ export default (absences, { text, startDate, endDate, sortBy }) => absences.filt
     const endDateMoment = new moment(absence.endDate);
     const startDateMatch = startDate ? startDate.isSameOrBefore(startDateMoment, 'day') : true;
     const endDateMatch = endDate ? endDate.isSameOrAfter(endDateMoment, 'day') : true;
-    const textMatch = absence.type.toLowerCase().includes(text.toLowerCase());
+    const textMatch = absence.type.toLowerCase().includes(text.trim().toLowerCase());
 
     return textMatch && startDateMatch && endDateMatch;
 }).sort((a, b) => {

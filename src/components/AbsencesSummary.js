@@ -12,9 +12,11 @@ export const AbsencesSummary = (props) => {
                 <h1 className="page-header__title">Viewing total {props.absenceCount} {absenceWord}</h1>
                 {
                     props.hiddenAbsenceCount === 0 ? (
-                        <p>No filtered absence!</p>
+                        <p className="page-header__no-absence">No filtered absence!</p>
                     ) : (
-                        <p>Filtered {props.hiddenAbsenceCount} {hiddenAbsenceCountWord} </p>
+                        <p className="page-header__filtered-absence">
+                            Filtered {props.hiddenAbsenceCount} {hiddenAbsenceCountWord}
+                        </p>
                     )
                 }
             </div>

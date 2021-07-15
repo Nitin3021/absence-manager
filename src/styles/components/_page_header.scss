@@ -11,3 +11,12 @@
         font-weight: 700;
     }
 }
+
+.page-header__no-absence {
+    font-style: italic;
+}
+
+.page-header__filtered-absence {
+    color: $blue;
+    font-style: italic;
+}
