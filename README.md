@@ -3,6 +3,8 @@
 ## Overview
 This ReactJS based application will fetch a set of data related to absence from an API and display it in a table form. A set of 10 records (if available) will be displayed after the page loads successfully. Thereafter, pagination can be used to go through the data. A set of filters are available which will help to view the selected data. It would also allow to sort the data by the selected column.
 
+![screenshot](https://github.com/Nitin3021/absence-manager/blob/e23216f048dec5b6e6bf0d037f63657493ec1a74/public/images/git-repo-1.JPG)
+
 ## Details
 *  After fetching data from the API, redux store has been implemented to pass the values between the components. 
 *  Initial page rendering will depend upon the successful fetch from the API. It will show a loading screen until a response is received, an error screen if the response is received with an error.
