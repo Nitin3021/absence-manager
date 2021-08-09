@@ -4,7 +4,8 @@ const filtersReducerDefaultState = {
     text: '',
     startDate: undefined,
     endDate: undefined,
-    sortBy: 'createdAt'
+    sortBy: 'createdAt',
+    selectType: 'selectType'
 };
 
 export default (state = filtersReducerDefaultState, action) => {
@@ -38,6 +39,11 @@ export default (state = filtersReducerDefaultState, action) => {
             return {
                 ...state,
                 sortBy: 'endDate'
+            };
+        case 'SET_SELECT_TYPE':
+            return {
+                ...state,
+                selectType: action.selectType
             };
         default:
             return state;

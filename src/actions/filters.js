@@ -24,3 +24,8 @@ export const sortByStartDate = () => ({
 export const sortByEndDate = () => ({
     type: 'SORT_BY_END_DATE'
 })
+
+export const setSelectType = (selectType) => ({
+    type: 'SET_SELECT_TYPE',
+    selectType
+})

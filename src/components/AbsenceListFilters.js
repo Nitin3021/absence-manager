@@ -7,7 +7,8 @@ import {
     setEndDate,
     sortByCreatedDate,
     sortByStartDate,
-    sortByEndDate
+    sortByEndDate,
+    setSelectType
 } from '../actions/filters';
 
 export class AbsenceListFilters extends React.Component {
@@ -38,6 +39,10 @@ export class AbsenceListFilters extends React.Component {
         }
     };
 
+    onTypeChange = (e) => {
+        this.props.setSelectType(e.target.value)
+    };
+
     render() {
         return (
             <div className="content-container">
@@ -46,11 +51,27 @@ export class AbsenceListFilters extends React.Component {
                         <input
                             type="text"
                             className="text-input"
-                            placeholder="Search absence type"
+                            placeholder="Search member name"
                             value={this.props.filters.text}
                             onChange={this.onTextChange}
                         />
                     </div>
+
+                    <div className="input-group__item">
+                        <select
+                            className="select"
+                            value={this.props.filters.selectType}
+                            onChange={this.onTypeChange}
+                        >
+                            <option value="selectType" defaultValue>Select Type</option>
+                            {
+                                this.props.uniqueAbsenceType.map((type) =>
+                                    <option key={type} value={type}>{type.charAt(0).toUpperCase() + type.slice(1)}</option>
+                                )
+                            }
+                        </select>
+                    </div>
+
                     <div className="input-group__item">
                         <DateRangePicker
                             startDate={this.props.filters.startDate}
@@ -63,6 +84,7 @@ export class AbsenceListFilters extends React.Component {
                             isOutsideRange={() => false}
                         />
                     </div>
+
                     <div className="input-group__item">
                         <select
                             className="select"
@@ -80,9 +102,16 @@ export class AbsenceListFilters extends React.Component {
     }
 };
 
-const mapStateToProps = (state) => ({
-    filters: state.filters
-});
+const mapStateToProps = (state) => {
+    const uniqueAbsenceType = state.absences
+        .map((absence) => absence.type)
+        .filter((type, index, arr) => arr.indexOf(type) === index);
+
+    return {
+        filters: state.filters,
+        uniqueAbsenceType
+    }
+};
 
 const mapDispatchToProps = (dispatch) => ({
     setTextFilter: (text) => dispatch(setTextFilter(text)),
@@ -90,7 +119,8 @@ const mapDispatchToProps = (dispatch) => ({
     setEndDate: (endDate) => dispatch(setEndDate(endDate)),
     sortByCreatedDate: () => dispatch(sortByCreatedDate()),
     sortByStartDate: () => dispatch(sortByStartDate()),
-    sortByEndDate: () => dispatch(sortByEndDate())
+    sortByEndDate: () => dispatch(sortByEndDate()),
+    setSelectType: (selectType) => dispatch(setSelectType(selectType))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AbsenceListFilters);

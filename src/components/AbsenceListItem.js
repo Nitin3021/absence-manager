@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import moment from 'moment';
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -46,13 +47,15 @@ export const AbsenceListItem = (props) => {
                         <span className="list-item-message">No Absence!</span>
                     </div>
                 ) : (
-                    <BootstrapTable
-                        id="table-absences"
-                        keyField="key"
-                        data={absences}
-                        columns={columns}
-                        pagination={paginationFactory()}
-                    />
+                    (
+                        <BootstrapTable
+                            id="table-absences"
+                            keyField="key"
+                            data={absences}
+                            columns={columns}
+                            pagination={paginationFactory()}
+                        />
+                    )
                 )
             }
         </div>

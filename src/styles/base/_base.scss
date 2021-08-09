@@ -4,10 +4,14 @@
 
 html {
     font-size: 62.5%;
+    height: 100%;
+    position: relative;
 }
 
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
     line-height: 1.6;
+    height: 100%;
+    position: relative;
 }
